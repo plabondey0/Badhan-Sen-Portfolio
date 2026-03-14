@@ -60,52 +60,55 @@
     body.menu-open .hamburger span:nth-child(2) { transform: translate(-50%, -50%) rotate(-45deg); }
     @media (max-width: 767px) { body.menu-open .hamburger span { width: 100%; left: 0; } }
 
-    /* Overlay Menu */
-    .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #050505; z-index: 100000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.5s ease, visibility 0.5s ease; }
+    /* --- OVERLAY MENU --- */
+    .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #050505; z-index: 50; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.5s ease, visibility 0.5s ease; }
     body.menu-open .mobile-menu-overlay { opacity: 1; visibility: visible; }
     .menu-bg { position: absolute; width: 150%; height: 150%; background: conic-gradient(from 0deg, rgba(196, 30, 58, 0.1), transparent 70%); animation: spinBg 10s linear infinite; }
     @keyframes spinBg { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    /* STATIC WHITE MENU LINKS */
+    .menu-link { 
+      display: block; 
+      font-size: 3.5rem; 
+      font-weight: 800; 
+      color: white; /* Solid white color */
+      transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition only */
+    }
+
+    /* Removed entrance animation delays and transforms */
     
-    .menu-link { display: block; font-size: 3.5rem; font-weight: 800; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3); transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.15s ease, color 0.3s ease, -webkit-text-stroke 0.3s ease; transform: translateY(50px) rotate(-5deg); opacity: 0; }
-    body.menu-open .menu-link { opacity: 1; transform: translateY(0) rotate(0deg); }
-    .menu-link:nth-child(1) { transition-delay: 0.03s; } 
-    .menu-link:nth-child(2) { transition-delay: 0.06s; } 
-    .menu-link:nth-child(3) { transition-delay: 0.09s; } 
-    .menu-link:nth-child(4) { transition-delay: 0.12s; }
-    .menu-link:nth-child(5) { transition-delay: 0.15s; }
-    .menu-link:hover { color: white; -webkit-text-stroke: 0px; transform: translateX(20px) skewX(-5deg); }
+    .menu-link:hover { 
+      color: var(--accent); 
+      transform: translateX(20px) skewX(-5deg); 
+    }
+    
+    /* Mobile Specific Menu Link Size */
+    @media (max-width: 767px) {
+        .menu-link { font-size: 2.5rem; }
+    }
+
     .menu-sub-link { opacity: 0; transform: translateY(20px); transition: all 0.4s ease; }
     body.menu-open .menu-sub-link { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-    @media (max-width: 767px) { .menu-link { font-size: 2.5rem; } }
 
-    /* Social Icons */
-    .social-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; transition: all 0.3s ease; color: white; }
-    .social-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(196, 30, 58, 0.1); transform: translateY(-3px); }
+    /* --- SOCIAL ICONS IN MENU --- */
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      color: white;
+    }
+    .social-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(196, 30, 58, 0.1);
+      transform: translateY(-3px);
+    }
     .social-link svg { width: 20px; height: 20px; fill: currentColor; }
-    
-    /* Countdown Box */
-    .countdown-box {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 1.5rem;
-        min-width: 80px;
-        text-align: center;
-    }
-    .countdown-box span { display: block; }
-    .countdown-number { font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--accent); }
-    .countdown-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 0.5rem; letter-spacing: 0.1em; }
-
-    /* Input Style */
-    .notify-input {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 1rem 1.5rem;
-        color: white;
-        outline: none;
-        transition: all 0.3s ease;
-    }
-    .notify-input:focus { border-color: var(--accent); background: rgba(255,255,255,0.08); }
-    .notify-input::placeholder { color: rgba(255,255,255,0.3); }
   </style>
 </head>
 <body>
