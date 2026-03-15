@@ -21,7 +21,6 @@
       border-radius: 50%; 
       pointer-events: none; 
       z-index: 9999; 
-      /* Added left/top transition for smooth movement & transform to center it */
       transition: left 0.1s ease-out, top 0.1s ease-out, width 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s, border 0.3s; 
       transform: translate(-50%, -50%);
       mix-blend-mode: difference; 
@@ -135,10 +134,12 @@
   <div id="cursor" class="cursor hidden md:block"></div>
 
   <!-- NAVBAR -->
-  <nav class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur-md py-5 flex justify-between items-center px-6 md:px-12">
-    <a href="index.html" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
+  <!-- UPDATED: Removed bg-black/70 and backdrop-blur-md for transparency -->
+  <nav class="fixed top-0 w-full z-50 py-5 flex justify-between items-center px-6 md:px-12">
+    <a href="/" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
       <span class="group-hover:text-[var(--accent)] transition-colors duration-300">Badhan</span><span class="text-[var(--accent)] group-hover:text-white transition-colors duration-300"> Sen</span>
     </a>
+
     <div class="flex items-center gap-8">
       <a href="https://calendly.com/badhansencontact/30min?month=2026-03" target="_blank" class="hidden md:block text-lg font-medium text-white hover:text-[var(--accent)] transition px-4 py-2 rounded-lg hover:bg-white/5">Let's Talk</a>
       <div id="menuBtn" class="hamburger"><span></span><span></span></div>
@@ -219,7 +220,7 @@
         </h2>
         
         <div class="space-y-4 text-base md:text-lg text-gray-400 leading-relaxed">
-          <p>Based in <span class="text-white">Worldwide</span>, I have been editing videos for over <span class="text-white">4+ years</span>. My journey started with a simple passion for storytelling.</p>
+          <p>Based in <span class="text-white">Worldwide</span>, I have been editing videos for over <span class="text-white">5+ years</span>. My journey started with a simple passion for storytelling.</p>
           <p>I specialize in creating engaging content for YouTube, Instagram Reels, and Corporate Media.</p>
         </div>
 
@@ -242,18 +243,17 @@
         <button class="tab-btn active px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="about">About Me</button>
         <button class="tab-btn px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="experience">Experience</button>
         <button class="tab-btn px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="education">Education</button>
+        <button class="tab-btn px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="software">Software</button>
         <button class="tab-btn px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="skills">Skills</button>
         <button class="tab-btn px-4 py-2 md:px-6 md:py-3 bg-[#161616] border border-white/20 rounded-lg font-medium text-xs md:text-sm uppercase tracking-wider" data-tab="awards">Awards</button>
       </div>
 
       <div class="reveal relative min-h-[400px]">
+        
+        <!-- UPDATED: Standardized padding and width -->
         <div id="tab-about" class="tab-content active">
-          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="relative w-full max-w-xs md:max-w-sm mx-auto transition duration-500 order-2 md:order-1 hidden md:block profile-hover rounded-lg overflow-hidden">
-              <div class="absolute inset-0 bg-[var(--accent)] transform rotate-0 rounded-lg"></div>
-              <img src="https://image2url.com/r2/default/images/1773060341714-efce6235-0cd6-49f7-86a9-3bc35ae80d78.blob" alt="Badhan Portrait" class="relative rounded-lg shadow-2xl w-full object-cover">
-            </div>
-            <div class="bg-[#111] border border-white/10 p-6 md:p-10 rounded-xl order-1 md:order-2">
+          <div class="flex justify-center">
+            <div class="bg-[#111] border border-white/10 p-6 md:p-8 rounded-xl w-full max-w-3xl">
               <div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
                 <span class="text-[var(--accent)] text-2xl md:text-3xl">📍</span>
                 <h4 class="text-xl md:text-2xl font-bold font-display">Based in Worldwide</h4>
@@ -263,7 +263,7 @@
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Nationality</span><span class="text-white font-bold">Bangladeshi</span></div>
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Phone</span><a href="tel:+8801540176951" class="text-white font-bold hover:text-[var(--accent)]">+880 1540176951</a></div>
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Email</span><a href="mailto:badhansencontact@gmail.com" class="text-white font-bold hover:text-[var(--accent)] break-all">badhansencontact@gmail.com</a></div>
-                <div class="info-row flex justify-between py-3"><span class="text-gray-500">Experience</span><span class="text-white font-bold">4+ Years</span></div>
+                <div class="info-row flex justify-between py-3"><span class="text-gray-500">Experience</span><span class="text-white font-bold">5+ Years</span></div>
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Freelance</span><span class="text-green-400 font-bold">Available</span></div>
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Discord</span><span class="text-white font-bold">badhansen.info</span></div>
                 <div class="info-row flex justify-between py-3"><span class="text-gray-500">Languages</span><span class="text-white font-bold">English, Hindi, Bengali</span></div>
@@ -275,12 +275,20 @@
         <div id="tab-experience" class="tab-content">
           <div class="space-y-6 max-w-3xl mx-auto">
             <div class="bg-[#111] border border-white/10 p-6 md:p-8 rounded-xl hover:border-[var(--accent)] transition-colors">
-              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Lead Video Editor</h4><span class="text-[var(--accent)] font-medium text-sm">2021 – Running</span></div>
-              <p class="text-gray-400 text-base md:text-lg">Freelance</p>
+              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Video Editor</h4><span class="text-[var(--accent)] font-medium text-sm">2026 – Running</span></div>
+              <p class="text-gray-400 text-base md:text-lg"> Misfits Media s.r.o</p>
+            </div>
+           <div class="bg-[#111] border border-white/10 p-6 md:p-8 rounded-xl hover:border-[var(--accent)] transition-colors">
+              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Senior Video Editor</h4><span class="text-[var(--accent)] font-medium text-sm">2024 – 2025</span></div>
+              <p class="text-gray-400 text-base md:text-lg">HypoMatrix</p>
             </div>
             <div class="bg-[#111] border border-white/10 p-6 md:p-8 rounded-xl hover:border-[var(--accent)] transition-colors">
-              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Motion Graphics Designer</h4><span class="text-[var(--accent)] font-medium text-sm">2019 – 2021</span></div>
-              <p class="text-gray-400 text-base md:text-lg">Creative Studio</p>
+              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Lead Video Editor</h4><span class="text-[var(--accent)] font-medium text-sm">2023 – 2024</span></div>
+              <p class="text-gray-400 text-base md:text-lg">Editscapes</p>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6 md:p-8 rounded-xl hover:border-[var(--accent)] transition-colors">
+              <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2"><h4 class="text-lg md:text-xl font-bold">Video Editor</h4><span class="text-[var(--accent)] font-medium text-sm">2021 – 2023</span></div>
+              <p class="text-gray-400 text-base md:text-lg">Cinematic Cut Studio</p>
             </div>
           </div>
         </div>
@@ -297,33 +305,59 @@
             </div>
           </div>
         </div>
-
-        <div id="tab-skills" class="tab-content">
+        
+        <!-- NEW SOFTWARE TAB CONTENT -->
+        <div id="tab-software" class="tab-content">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
-              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Adobe Premiere Pro</span><span class="text-[var(--accent)]">95%</span></div>
-              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 95%"></div></div>
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Adobe Premiere Pro</span><span class="text-[var(--accent)]">100%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 100%"></div></div>
             </div>
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
               <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">After Effects</span><span class="text-[var(--accent)]">85%</span></div>
               <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 85%"></div></div>
             </div>
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">DaVinci Resolve</span><span class="text-[var(--accent)]">50%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 50%"></div></div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
               <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Photoshop</span><span class="text-[var(--accent)]">75%</span></div>
               <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 75%"></div></div>
             </div>
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
-              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Audition</span><span class="text-[var(--accent)]">80%</span></div>
-              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 80%"></div></div>
-            </div> 
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Canva</span><span class="text-[var(--accent)]">90%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 90%"></div></div>
+            </div>
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
-              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Davinci Resolve</span><span class="text-[var(--accent)]">80%</span></div>
-              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 80%"></div></div>
-            </div>     
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Capcut</span><span class="text-[var(--accent)]">90%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-skills" class="tab-content">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Storytelling</span><span class="text-[var(--accent)]">100%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 100%"></div></div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Visual Effects</span><span class="text-[var(--accent)]">95%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 95%"></div></div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Sound Editing</span><span class="text-[var(--accent)]">85%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 85%"></div></div>
+            </div>
             <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
               <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Motion Graphics</span><span class="text-[var(--accent)]">80%</span></div>
               <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 80%"></div></div>
-            </div>     
+            </div> 
+            <div class="bg-[#111] border border-white/10 p-4 md:p-6 rounded-xl">
+              <div class="flex justify-between mb-2 text-sm md:text-base"><span class="font-medium">Colour Grading</span><span class="text-[var(--accent)]">75%</span></div>
+              <div class="w-full bg-white/10 rounded-full h-2"><div class="progress-bar bg-[var(--accent)] h-2 rounded-full" style="--progress: 75%"></div></div>
+            </div>      
           </div>
         </div>
 
@@ -393,9 +427,28 @@
     // 3. Scroll Reveal
     const reveals = document.querySelectorAll('.reveal'); const revealOnScroll = () => reveals.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('active'); }); window.addEventListener('scroll', revealOnScroll); window.addEventListener('load', revealOnScroll);
 
-    // 4. Tabs Logic
-    const tabButtons = document.querySelectorAll('.tab-btn'); const tabContents = document.querySelectorAll('.tab-content');
-    tabButtons.forEach(btn => { btn.addEventListener('click', () => { tabButtons.forEach(b => b.classList.remove('active')); tabContents.forEach(c => c.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active'); if(btn.getAttribute('data-tab') === 'skills') document.querySelectorAll('.progress-bar').forEach(bar => bar.classList.add('animate')); }); });
+    // 4. Tabs Logic (Updated)
+    const tabButtons = document.querySelectorAll('.tab-btn'); 
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(btn => { 
+      btn.addEventListener('click', () => {
+        // Remove active states
+        tabButtons.forEach(b => b.classList.remove('active')); 
+        tabContents.forEach(c => c.classList.remove('active')); 
+        
+        // Add active states
+        btn.classList.add('active'); 
+        const activeTab = document.getElementById('tab-' + btn.getAttribute('data-tab'));
+        activeTab.classList.add('active');
+        
+        // Animate progress bars only if the tab contains them (Skills or Software)
+        const tabType = btn.getAttribute('data-tab');
+        if(tabType === 'skills' || tabType === 'software') {
+            activeTab.querySelectorAll('.progress-bar').forEach(bar => bar.classList.add('animate'));
+        }
+      }); 
+    });
   </script>
 </body>
 </html>
