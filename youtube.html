@@ -64,9 +64,9 @@
   </div>
 
   <!-- NAVBAR -->
-  <!-- FIX 1: Logo Link Updated -->
+  <!-- FIX: Removed .html extensions for Vercel compatibility -->
   <nav class="fixed top-0 w-full z-50 py-5 flex justify-between items-center px-6 md:px-12">
-    <a href="index.html" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
+    <a href="index" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
       <span class="group-hover:text-[var(--accent)] transition-colors duration-300">Badhan</span><span class="text-[var(--accent)] group-hover:text-white transition-colors duration-300"> Sen</span>
     </a>
     <div class="flex items-center gap-8">
@@ -83,12 +83,12 @@
     </button>
     <div class="relative z-10 text-center w-full px-8">
       <div class="flex flex-col gap-4">
-        <!-- FIX 2: All Menu Links Updated -->
-        <a href="index.html" class="menu-link font-display">Home</a>
-        <a href="about.html" class="menu-link font-display">About</a>
-        <a href="works.html" class="menu-link font-display">Works</a>
-        <a href="shop.html" class="menu-link font-display">Shop</a>
-        <a href="contact.html" class="menu-link font-display">Contact</a>
+        <!-- FIX: Removed .html extensions for Vercel compatibility -->
+        <a href="index" class="menu-link font-display">Home</a>
+        <a href="about" class="menu-link font-display">About</a>
+        <a href="works" class="menu-link font-display">Works</a>
+        <a href="shop" class="menu-link font-display">Shop</a>
+        <a href="contact" class="menu-link font-display">Contact</a>
       </div>
       <div class="menu-sub-link mt-10 flex justify-center gap-4">
         <a href="https://www.linkedin.com/in/badhansen" target="_blank" class="social-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
@@ -110,26 +110,32 @@
   <!-- VIDEO GRID -->
   <section class="py-8 md:py-12 px-6 md:px-12 max-w-7xl mx-auto">
     <div class="grid md:grid-cols-3 gap-6">
+      <!-- Video 1 -->
       <div class="reveal video-trigger" onclick="openModal('pZWCWWToNsE')">
           <img src="https://img.youtube.com/vi/pZWCWWToNsE/maxresdefault.jpg" alt="Reel 1" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
+      <!-- Video 2 -->
       <div class="reveal video-trigger" style="transition-delay: 0.1s;" onclick="openModal('l11MMCaZ-9M')">
           <img src="https://img.youtube.com/vi/l11MMCaZ-9M/maxresdefault.jpg" alt="Reel 2" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
+      <!-- Video 3 -->
       <div class="reveal video-trigger" style="transition-delay: 0.2s;" onclick="openModal('FRpiQOQpOMI')">
           <img src="https://img.youtube.com/vi/FRpiQOQpOMI/maxresdefault.jpg" alt="Reel 3" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
+      <!-- Video 4 -->
       <div class="reveal video-trigger" style="transition-delay: 0.3s;" onclick="openModal('U0pAs6R9Kp4')">
           <img src="https://img.youtube.com/vi/U0pAs6R9Kp4/maxresdefault.jpg" alt="Reel 4" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
+      <!-- Video 5 -->
       <div class="reveal video-trigger" style="transition-delay: 0.4s;" onclick="openModal('-0_hWF_zqjg')">
           <img src="https://img.youtube.com/vi/-0_hWF_zqjg/maxresdefault.jpg" alt="Reel 5" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
+      <!-- Video 6 -->
       <div class="reveal video-trigger" style="transition-delay: 0.5s;" onclick="openModal('eahqTB6t4ZQ')">
           <img src="https://img.youtube.com/vi/eahqTB6t4ZQ/maxresdefault.jpg" alt="Reel 6" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
