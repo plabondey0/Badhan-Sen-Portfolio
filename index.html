@@ -131,8 +131,7 @@
   </div>
 
   <!-- NAVBAR -->
-  <!-- UPDATED LOGO LINK -->
-  <nav class="fixed top-0 w-full z-50 py-5 flex justify-between items-center px-6 md:px-12">
+  <nav class="fixed top-0 w-full z-50 py-5 flex justify-between items-center px-6 md:px-12 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent backdrop-blur-md">
     <a href="index.html" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
       <span class="group-hover:text-[var(--accent)] transition-colors duration-300">Badhan</span><span class="text-[var(--accent)] group-hover:text-white transition-colors duration-300"> Sen</span>
     </a>
@@ -154,7 +153,6 @@
 
     <div class="relative z-10 text-center w-full px-8">
       <div class="flex flex-col gap-4">
-        <!-- UPDATED MENU LINKS -->
         <a href="index.html" class="menu-link font-display">Home</a>
         <a href="about.html" class="menu-link font-display">About</a>
         <a href="works.html" class="menu-link font-display">Works</a>
@@ -183,16 +181,16 @@
   </div>
 
   <!-- HERO SECTION -->
+  <!-- UPDATED: Changed items-start to items-center to move text down -->
   <section class="min-h-screen flex items-center relative overflow-hidden">
     <div class="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[var(--accent)] rounded-full filter blur-[120px] md:blur-[180px] opacity-20"></div>
     
     <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center pt-20">
       <div class="order-2 md:order-1 text-center md:text-left">
         <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold font-display leading-tight mb-6 hero-text" style="animation-delay: 0.5s;">Hello, I am<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Badhan Sen</span></h1>
-        <p class="text-[var(--accent)] uppercase tracking-widest mb-4 hero-text text-sm md:text-base">𝗩𝗶𝗱𝗲𝗼 Editor & 𝗠𝗼𝘁𝗶𝗼𝗻 Artist</p>
+        <p class="text-[var(--accent)] uppercase tracking-widest mb-4 hero-text text-sm md:text-base">𝗧𝗼𝗽 𝗿𝗮𝘁𝗲𝗱 𝗩𝗶𝗱𝗲𝗼 𝗘𝗱𝗶𝘁𝗼𝗿 𝗼𝗻 𝗨𝗽𝘄𝗼𝗿𝗸</p>
         <p class="text-gray-400 text-base md:text-lg mb-8 max-w-md mx-auto md:mx-0 hero-text" style="animation-delay: 0.7s;">I craft visual stories that captivate audiences worldwide. Specializing in high quality video editing and motion graphics.</p>
         <div class="flex gap-4 justify-center md:justify-start hero-text" style="animation-delay: 0.9s;">
-          <!-- UPDATED HERO LINKS -->
           <a href="about.html" class="btn-magnetic px-6 md:px-8 py-3 bg-white text-black font-bold rounded shadow-lg text-sm md:text-base">About me</a>
           <a href="works.html" class="btn-magnetic px-6 md:px-8 py-3 border border-white/30 hover:border-[var(--accent)] transition rounded text-sm md:text-base">My Works</a>
         </div>
@@ -201,15 +199,36 @@
           <div><h3 class="text-3xl md:text-4xl font-bold font-display counter" data-target="5">0</h3><p class="text-gray-500 text-xs md:text-sm">Years Exp.</p></div>
           <div><h3 class="text-3xl md:text-4xl font-bold font-display counter" data-target="500">0</h3><p class="text-gray-500 text-xs md:text-sm">Projects</p></div>
         </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center md:justify-start gap-4 mt-8 hero-text" style="animation-delay: 1.3s;">
+          <a href="https://www.linkedin.com/in/badhansen" target="_blank" class="social-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://www.instagram.com/badhansen.info/" target="_blank" class="social-link" title="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line></svg>
+          </a>
+          <a href="https://x.com/badhansen_info" target="_blank" class="social-link" title="Twitter">
+             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+          <a href="https://www.upwork.com/freelancers/~01fbcf69a2d60720ae" target="_blank" class="social-link" title="Upwork">
+             <svg viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"></path></svg>
+          </a>
+          <a href="https://www.facebook.com/badhansen.info" target="_blank" class="social-link" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://youtube.com/@editscapes" target="_blank" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
       </div>
 
       <div class="relative flex flex-col justify-center items-center order-1 md:order-2 float-img mt-10 md:mt-0">
         <div class="relative w-64 sm:w-72 md:w-96 h-[350px] sm:h-[400px] md:h-[550px] rounded-lg overflow-hidden border-2 border-white/20 distort-img shadow-2xl scale-80">
           <img src="https://image2url.com/r2/default/images/1773253455261-55757a2d-9c66-480e-8954-d849598ded11.png" alt="Badhan Sen" class="w-full h-full object-cover">
         </div>
-        <div class="mt-10 hero-text" style="animation-delay: 1.3s;">
+        <div class="mt-10 hero-text" style="animation-delay: 1.5s;">
              <div class="contact-btn-wrapper">
-            <!-- UPDATED HERO LINK -->
             <a href="contact.html" class="contact-btn-inner text-white font-bold uppercase tracking-wider text-sm inline-flex items-center gap-3 group">
                Contact Me
                <svg class="w-5 h-5 transform group-hover:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -245,7 +264,6 @@
         <p class="text-gray-400 max-w-xl mx-auto">I transform raw footage into compelling visual narratives.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
-        <!-- UPDATED SERVICE CARD LINKS -->
         <a href="youtube.html" class="service-card block bg-[var(--card)] p-8 rounded-lg border border-white/10 hover:border-[var(--accent)] transition duration-300 h-full group">
           <div class="text-[var(--accent)] mb-5">
             <svg class="w-10 h-10 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"></path></svg>
@@ -506,7 +524,6 @@
       </div>
 
       <div class="reveal flex justify-center">
-        <!-- UPDATED PORTFOLIO LINK -->
         <a href="works.html" class="relative block w-full h-20 md:h-24 rounded-xl overflow-hidden border border-white/11 group transform hover:scale-[1.01] transition-all duration-300 shadow-lg cursor-pointer">
           <img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=2000&auto=format&fit=crop" alt="View Works Background" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300">
           <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 group-hover:from-[var(--accent)]/30 group-hover:via-black/60 group-hover:to-black/30 transition-all duration-500"></div>
@@ -572,7 +589,6 @@
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Royalty Free Music</li>
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 1 Revision Round</li>
           </ul>
-          <!-- UPDATED PRICING LINK -->
           <a href="contact.html" class="block text-center py-3 border border-white/20 rounded-lg hover:border-white hover:bg-white hover:text-black transition font-medium">Get Started</a>
         </div>
         <div class="pricing-card featured bg-[var(--card)] rounded-2xl p-8 border-2 border-[var(--accent)] relative flex flex-col h-full transform md:-translate-y-4">
@@ -584,7 +600,6 @@
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Motion Graphics Included</li>
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sound Design & SFX</li>
           </ul>
-          <!-- UPDATED PRICING LINK -->
           <a href="contact.html" class="block text-center py-3 bg-[var(--accent)] rounded-lg font-bold hover:bg-[var(--accent-light)] transition shadow-lg">Get Started</a>
         </div>
         <div class="pricing-card bg-[var(--card)] rounded-2xl p-8 border border-white/10 flex flex-col h-full">
@@ -595,7 +610,6 @@
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Custom Animations</li>
             <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Unlimited Revisions</li>
           </ul>
-          <!-- UPDATED PRICING LINK -->
           <a href="contact.html" class="block text-center py-3 border border-white/20 rounded-lg hover:border-white hover:bg-white hover:text-black transition font-medium">Get Started</a>
         </div>
       </div>
