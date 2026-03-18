@@ -44,7 +44,7 @@
     .modal-content { position: relative; width: 90%; max-width: 900px; background: #000; border-radius: 12px; overflow: hidden; transform: scale(0.9); transition: transform 0.3s ease; box-shadow: 0 0 50px rgba(196, 30, 58, 0.2); }
     #video-modal.active .modal-content { transform: scale(1); }
     
-    /* Close button - made more prominent */
+    /* Close button */
     .modal-close {
       position: absolute;
       top: -50px;
@@ -79,6 +79,12 @@
     .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(196, 30, 58, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(196, 30, 58, 0.4); }
     .video-trigger:hover .play-icon { transform: translate(-50%, -50%) scale(1.1); background: var(--accent); }
     .play-icon svg { width: 30px; height: 30px; fill: white; margin-left: 4px; }
+
+    /* --- NAVBAR STUCK STYLE --- */
+    .nav-scrolled {
+      background: rgba(10, 10, 10, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -88,7 +94,6 @@
   <!-- VIDEO MODAL -->
   <div id="video-modal">
     <div class="modal-content">
-      <!-- Close button with X icon -->
       <button class="modal-close" onclick="closeModal()" aria-label="Close video">
         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -102,13 +107,15 @@
   </div>
 
   <!-- NAVBAR -->
-  <nav class="fixed top-0 w-full z-50 py-5 flex justify-between items-center px-6 md:px-12 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent backdrop-blur-md">
-    <a href="index.html" class="text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
+  <!-- Added id="navbar" for JS scroll detection -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 py-4 md:py-5 flex justify-between items-center px-6 md:px-12 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent backdrop-blur-md transition-all duration-300">
+    <a href="index.html" class="text-2xl md:text-3xl font-bold font-display z-50 group transition-all duration-300 hover:scale-105">
       <span class="group-hover:text-[var(--accent)] transition-colors duration-300">Badhan</span><span class="text-[var(--accent)] group-hover:text-white transition-colors duration-300"> Sen</span>
     </a>
 
-    <div class="flex items-center gap-8">
-      <a href="https://calendly.com/badhansencontact/30min?month=2026-03" target="_blank" class="hidden md:block text-lg font-medium text-white hover:text-[var(--accent)] transition px-4 py-2 rounded-lg hover:bg-white/5">Let's Talk</a>
+    <div class="flex items-center gap-4 md:gap-8">
+      <!-- VISIBLE ON MOBILE AND DESKTOP -->
+      <a href="https://calendly.com/badhansencontact/30min?month=2026-03" target="_blank" class="text-sm md:text-lg font-medium text-white hover:text-[var(--accent)] transition px-3 py-2 rounded-lg hover:bg-white/5">Let's Talk</a>
       <div id="menuBtn" class="hamburger"><span></span><span></span></div>
     </div>
   </nav>
@@ -152,52 +159,55 @@
   </div>
 
   <!-- HERO -->
-  <section class="pt-32 pb-8 text-center px-6 md:px-12">
-    <div>
+  <section class="pt-32 pb-8 text-center">
+    <div class="max-w-7xl mx-auto px-6">
       <h1 class="text-4xl md:text-6xl font-bold font-display mb-4">Reels & Shorts</h1>
       <p id="scramble" class="text-lg md:text-xl text-gray-400"></p>
     </div>
   </section>
 
   <!-- VIDEO GRID -->
-  <section class="py-8 md:py-12 px-6 md:px-12 max-w-7xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Video 1 -->
-      <div class="reveal video-trigger" onclick="openModal('pZWCWWToNsE')">
+  <section class="py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Video 1 -->
+        <div class="reveal video-trigger" onclick="openModal('pZWCWWToNsE')">
           <img src="https://img.youtube.com/vi/pZWCWWToNsE/maxresdefault.jpg" alt="Reel 1" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <!-- Video 2 -->
-      <div class="reveal video-trigger" style="transition-delay: 0.1s;" onclick="openModal('l11MMCaZ-9M')">
+        </div>
+        <!-- Video 2 -->
+        <div class="reveal video-trigger" style="transition-delay: 0.1s;" onclick="openModal('l11MMCaZ-9M')">
           <img src="https://img.youtube.com/vi/l11MMCaZ-9M/maxresdefault.jpg" alt="Reel 2" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <!-- Video 3 -->
-      <div class="reveal video-trigger" style="transition-delay: 0.2s;" onclick="openModal('FRpiQOQpOMI')">
+        </div>
+        <!-- Video 3 -->
+        <div class="reveal video-trigger" style="transition-delay: 0.2s;" onclick="openModal('FRpiQOQpOMI')">
           <img src="https://img.youtube.com/vi/FRpiQOQpOMI/maxresdefault.jpg" alt="Reel 3" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <!-- Video 4 -->
-      <div class="reveal video-trigger" style="transition-delay: 0.3s;" onclick="openModal('U0pAs6R9Kp4')">
+        </div>
+        <!-- Video 4 -->
+        <div class="reveal video-trigger" style="transition-delay: 0.3s;" onclick="openModal('U0pAs6R9Kp4')">
           <img src="https://img.youtube.com/vi/U0pAs6R9Kp4/maxresdefault.jpg" alt="Reel 4" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <!-- Video 5 -->
-      <div class="reveal video-trigger" style="transition-delay: 0.4s;" onclick="openModal('-0_hWF_zqjg')">
+        </div>
+        <!-- Video 5 -->
+        <div class="reveal video-trigger" style="transition-delay: 0.4s;" onclick="openModal('-0_hWF_zqjg')">
           <img src="https://img.youtube.com/vi/-0_hWF_zqjg/maxresdefault.jpg" alt="Reel 5" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <!-- Video 6 -->
-      <div class="reveal video-trigger" style="transition-delay: 0.5s;" onclick="openModal('eahqTB6t4ZQ')">
+        </div>
+        <!-- Video 6 -->
+        <div class="reveal video-trigger" style="transition-delay: 0.5s;" onclick="openModal('eahqTB6t4ZQ')">
           <img src="https://img.youtube.com/vi/eahqTB6t4ZQ/maxresdefault.jpg" alt="Reel 6" class="w-full aspect-video">
           <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer id="contact" class="py-16 md:py-24 relative bg-[#050505] text-center">
-    <div class="container mx-auto px-6">
+    <!-- Updated to max-w-7xl -->
+    <div class="max-w-7xl mx-auto px-6">
       <div class="reveal"><h2 class="text-5xl md:text-9xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-700 mb-8">BADHAN SEN</h2></div>
       <div class="reveal flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-12">
         <div class="border border-white/20 p-6 md:p-8 text-left hover:border-[var(--accent)] transition group"><p class="text-gray-400 text-sm uppercase mb-2">Email Me</p><a href="mailto:badhansencontact@gmail.com" class="text-lg md:text-xl font-bold group-hover:text-[var(--accent)] transition break-all">badhansencontact@gmail.com</a></div>
@@ -255,6 +265,16 @@
       if (e.key === "Escape" && modal.classList.contains('active')) {
         history.back();
       }
+    });
+
+    // --- NAVBAR STUCK EFFECT ---
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
     });
   </script>
 </body>
